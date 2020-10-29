@@ -1,0 +1,25 @@
+<!-- 头部 -->
+<div class="header">
+    <!-- 网站标志 -->
+    <div class="logo fl">
+        黑马程序员 <i>ITHEIMA</i>
+    </div>
+    <!-- /网站标志 -->
+    <!-- 用户信息 -->
+    <div class="info">
+        <div class="profile dropdown fr">
+            <span class="btn dropdown-toggle" data-toggle="dropdown">
+                {{userInfo && userInfo.username}}
+                <span class="caret"></span>
+            </span>
+            <ul class="dropdown-menu">
+                <!-- 和上面一样，这里用了userInfo这个框架开放的全局数据，任何模板在渲染时都可以使用userInfo这个数据 -->
+                <!-- 使用user._id时不要忘记@使_id原文输出 -->
+                <li><a href="/admin/user-edit?id={{@userInfo._id}}">个人资料</a></li>
+                <li><a href="/admin/logout">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /用户信息 -->
+</div>
+<!-- /头部 -->
